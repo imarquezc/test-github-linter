@@ -21,9 +21,9 @@ const someObject = { foo: 'bar' }
     provides you with all information you need to get started.
   </WelcomeItem>
 
-  <WelcomeItem v-if="someObject?.foo">
+  <WelcomeItem v-if="someObject.foo">
     <template #icon>
-      <ToolingIcon />
+      <ToolingIcon v-if="someObject?.foo" />
     </template>
     <template #heading>Tooling</template>
 
